@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  owner: MyString
+  iban: MyString
+  bic: MyString
+  number: 1
+  bank_code: 1
+
+two:
+  owner: MyString
+  iban: MyString
+  bic: MyString
+  number: 1
+  bank_code: 1

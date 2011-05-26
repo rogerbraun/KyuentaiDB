@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @person.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @person.klass %>
+</p>
+
+<h2>Adressen</h2>
+<div id="addresses">
+  <p>
+    <% @person.addresses.each do |address| %>
+      <%= address.street %> <br>
+      <%= address.zip %> <br>
+      <%= address.city %> <br>
+      <%= address.misc %> <br>
+      <%= link_to "Bearbeiten", edit_address_path(address) %>
+    <% end %>
+  </p>
+</div>
+
+<h2>Konten</h2>
+<div id="accounts">
+  <p>
+    <% @person.accounts.each do |account| %>
+      <%= account.owner%> <br>
+      <%= account.bic %> <br>
+      <%= account.iban %> <br>
+      <%= account.bank_code %> <br>
+      <%= account.number %> <br>
+      <%= link_to "Bearbeiten", edit_account_path(account) %>
+    <% end %>
+  </p>
+</div>
+
+<h2>Spenden</h2>
+<div id="donations">
+  <p>
+    <% @person.donations.each do |donation| %>
+      <%= donation.amount%> <br>
+      <%= donation.recurring ? "Dauerhaft" : "Einzelspende"  %> <br>
+      <%= link_to "Bearbeiten", edit_donation_path(donation) %>
+    <% end %>
+  </p>
+</div>
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

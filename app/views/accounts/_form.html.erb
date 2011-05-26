@@ -1,0 +1,40 @@
+<%= simple_form_for(@account) do |f| %>
+  <% if @account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+      <% @account.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :owner %><br />
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
+    <%= f.label :iban %><br />
+    <%= f.text_field :iban %>
+  </div>
+  <div class="field">
+    <%= f.label :bic %><br />
+    <%= f.text_field :bic %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :bank_code %><br />
+    <%= f.text_field :bank_code %>
+  </div>
+  <div class="field">
+    <%= f.association :person %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
