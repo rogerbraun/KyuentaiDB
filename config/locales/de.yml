@@ -1,0 +1,16 @@
+de:
+  simple_form:
+    labels:
+      person:
+        last_name: "Nachname"
+        name: "Vorname"
+  date:
+    formats: 
+      default: ""
+      long: ""
+      short: ""
+    order: [ :day, :month, :year ]
+    day_names: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
+    abbr_day_names: [So, Mo, Di, Mo, Do, Fr, Sa]
+    month_names: [~, Januar, Februar, Maerz, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+    abbr_month_names: [~, Jan., Feb., Maerz, Apr., Mai, Juni, Juli, Aug., Sept.,  Okt., Nov., Dez.]

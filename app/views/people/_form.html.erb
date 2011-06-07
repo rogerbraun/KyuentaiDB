@@ -12,11 +12,35 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.input :name %><br />
   </div>
   <div class="field">
     <%= f.collection_radio :klass, [["LegalPerson", 'Juristische Person'] ,["NaturalPerson", 'Natuerliche Person']], :first, :last %>
+  </div>
+  <div class="field">
+    <%= f.input :last_name %>
+  </div>
+  <div class="field">
+    <%= f.input :sex %>
+  </div>
+  <div class="field">
+    <%= f.input :number %>
+  </div>
+  <div class="field">
+    <%= f.input :telephone %>
+  </div>
+  <div class="field">
+    <%= f.input :date_of_joining %>
+  </div>
+  <div class="field">
+    <%= f.input :date_of_birth, :start_year => Date.today.year - 90,
+                                :end_year => Date.today.year - 12 %>
+  </div>
+  <div class="field">
+    <%= f.input :nationality %>
+  </div>
+  <div class="field">
+    <%= f.input :email %>
   </div>
   <div class="field">
     <%= f.association :addresses %>
@@ -24,10 +48,8 @@
   <div class="field">
     <%= f.association :accounts%>
   </div>
-  </div>
   <div class="field">
     <%= f.association :donations %>
-  </div>
   </div>
   <div class="actions">
     <%= f.submit %>
